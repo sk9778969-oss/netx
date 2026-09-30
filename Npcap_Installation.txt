@@ -1,0 +1,47 @@
+================================================================================
+                     NPCAP INSTALLATION GUIDE FOR NETX
+================================================================================
+
+NetX uses Npcap for raw packet capture on Windows systems.
+
+Npcap is the standard packet capture and network analysis driver for Windows,
+developed by the Nmap Project.
+
+================================================================================
+STEP-BY-STEP INSTALLATION
+================================================================================
+
+1. Download the official Npcap installer:
+   Website: https://npcap.com/#download
+   Direct installer: https://npcap.com/dist/npcap-1.80.exe (or latest release)
+
+2. Run the downloaded installer (e.g., npcap-setup.exe) as Administrator.
+
+3. CRITICAL INSTALLATION OPTION:
+   During the setup wizard, on the "Installation Options" screen, ensure you
+   CHECK the following option:
+   
+   [X] "Install Npcap in WinPcap API-compatible Mode"
+   
+   This ensures standard packet analysis tools and Scapy can access the Npcap
+   driver seamlessly.
+
+4. (Optional) Check "Support raw 802.11 traffic (and monitor mode) for wireless adapters"
+   if you intend to capture specialized raw 802.11 frames.
+
+5. Click "Install" and complete the wizard.
+
+6. Launch NetX.exe. The "CAPTURE HEALTH" panel on the dashboard will now
+   display:
+   "Npcap: ✓ AVAILABLE"
+
+================================================================================
+RUNNING WITHOUT NPCAP (DEMO MODE)
+================================================================================
+
+If you cannot install Npcap or do not have administrative privileges:
+- NetX does NOT require Npcap to run in DEMO Mode.
+- Simply click "START DEMO" on the dashboard to inspect and evaluate all
+  application features, protocol graphs, top talkers, connection lists, and
+  explainable anomaly detection heuristics with realistic simulated traffic.
+================================================================================
